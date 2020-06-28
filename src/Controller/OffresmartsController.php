@@ -103,4 +103,29 @@ class OffresmartsController extends AppController
 
         return $this->redirect(['action' => 'index']);
     }
+
+    public function prestation(){
+        //Solutions
+        $this->viewBuilder()->setLayout('staticpage');
+    }
+
+    public function contact(){
+        //contact
+        $this->viewBuilder()->setLayout('staticpage');
+    }
+
+    public function reference(){
+        //contact
+        $this->viewBuilder()->setLayout('staticpage');
+    }
+
+    public function termecondition(){
+        //contact
+        $this->viewBuilder()->setLayout('staticpage');
+    }
+
+    public function contrat(){
+        //contact
+        $this->viewBuilder()->setLayout('staticpage');
+    }
 }

@@ -4,7 +4,7 @@
  * @var \App\Model\Entity\Offresmart[]|\Cake\Collection\CollectionInterface $offresmarts
  */
 ?>
-<div class="offresmarts index content">
+<!--<div class="offresmarts index content">
     <?= $this->Html->link(__('New Offresmart'), ['action' => 'add'], ['class' => 'button float-right']) ?>
     <h3><?= __('Offresmarts') ?></h3>
     <div class="table-responsive">
@@ -47,4 +47,207 @@
         </ul>
         <p><?= $this->Paginator->counter(__('Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total')) ?></p>
     </div>
-</div>
+</div>-->
+
+
+
+<?= $this->element('header'); ?>
+<?= $this->element('slider'); ?>
+
+
+
+<section id="content">
+    <div class="container">
+    <div class="row">
+    <div class="span12">
+        <h4><strong>NOS OFFRES</strong></h4>
+        </div>
+    </div>
+    <!-- divider -->
+    <div class="row">
+        <div class="span12">
+        <div class="solidline">
+        </div>
+        </div>
+    </div>
+    <!-- end divider -->
+
+    <div class="row">
+        <?php foreach ($categories as $category): ?>
+        <div class="span12">
+            <h4><strong><?= h($category->name) ?></strong></h4>
+        </div>
+        <?php foreach ($category->offres as $offres) : ?>
+        <div class="span4">
+            <div class="pricing-box-alt">
+                <div class="pricing-heading">
+                    <h3><strong><?= @h($offres->name) ?></strong></h3>
+                </div>
+                <div class="pricing-terms">
+                    <h6> <?= @h($offres->prix) ?> FCFA / Mois</h6>
+                </div>
+                <div class="pricing-content">
+                    <ul>
+                    <?php foreach ($offres as $offre) : ?>
+                        <?php foreach ($offre->elements as $elements) : ?>
+                        <li><i class="icon-ok"></i><?= @h($elements->name) ?></li>
+                        <?php endforeach; ?>
+                    <?php endforeach; ?>
+
+                    </ul>
+                </div>
+                <div class="pricing-action">
+                    <a href="#" class="btn btn-medium btn-theme"><i class="icon-bolt"></i> Souscrire</a>
+                </div>
+            </div>
+        </div>
+        <?php endforeach; ?>
+        <?php endforeach; ?>
+    </div>
+    <!-- divider -->
+    <div class="row">
+        <div class="span12">
+        <div class="solidline">
+        </div>
+        </div>
+    </div>
+    <!-- end divider -->
+
+    <!--<div class="row">
+        <div class="span12">
+        <div class="row">
+            <div class="span3">
+            <div class="box aligncenter">
+                <div class="aligncenter icon">
+                <i class="icon-briefcase icon-circled icon-64 active"></i>
+                </div>
+                <div class="text">
+                <h6>Securité physique</h6>
+                <p>
+                    Lorem ipsum dolor sit amet, has ei ipsum scaevola deseruisse am sea facilisis.
+                </p>
+                <a href="#">Détails</a>
+                </div>
+            </div>
+            </div>
+            <div class="span3">
+            <div class="box aligncenter">
+                <div class="aligncenter icon">
+                <i class=" icon-truck icon-circled icon-64 active"></i>
+                </div>
+                <div class="text">
+                <h6>Escorte</h6>
+                <p>
+                    Lorem ipsum dolor sit amet, has ei ipsum scaevola deseruisse am sea facilisis.
+                </p>
+                <a href="#">Détails</a>
+                </div>
+            </div>
+            </div>
+            <div class="span3">
+            <div class="box aligncenter">
+                <div class="aligncenter icon">
+                <i class=" icon-camera icon-circled icon-64 active"></i>
+                </div>
+                <div class="text">
+                <h6>Télésurveillance</h6>
+                <p>
+                    Lorem ipsum dolor sit amet, has ei ipsum scaevola deseruisse am sea facilisis.
+                </p>
+                <a href="#">Détails</a>
+                </div>
+            </div>
+            </div>
+            <div class="span3">
+            <div class="box aligncenter">
+                <div class="aligncenter icon">
+                <i class=" icon-bell icon-circled icon-64 active"></i>
+                </div>
+                <div class="text">
+                <h6>Alarme</h6>
+                <p>
+                    Lorem ipsum dolor sit amet, has ei ipsum scaevola deseruisse am sea facilisis.
+                </p>
+                <a href="#">Détails</a>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>-->
+
+    <!--<div class="row">
+        <div class="span12">
+        <h4>Nos clients <strong>satisfaits</strong></h4>
+        <ul id="mycarousel" class="jcarousel-skin-tango recent-jcarousel clients">
+            <li>
+            <a href="#">
+                <img src="img/dummies/clients/client1.png" class="client-logo" alt="" />
+                </a>
+            </li>
+            <li>
+            <a href="#">
+                <img src="img/dummies/clients/client2.png" class="client-logo" alt="" />
+                </a>
+            </li>
+            <li>
+            <a href="#">
+                <img src="img/dummies/clients/client3.png" class="client-logo" alt="" />
+                </a>
+            </li>
+            <li>
+            <a href="#">
+                <img src="img/dummies/clients/client4.png" class="client-logo" alt="" />
+                </a>
+            </li>
+            <li>
+            <a href="#">
+                <img src="img/dummies/clients/client5.png" class="client-logo" alt="" />
+                </a>
+            </li>
+            <li>
+            <a href="#">
+                <img src="img/dummies/clients/client6.png" class="client-logo" alt="" />
+                </a>
+            </li>
+            <li>
+            <a href="#">
+                <img src="img/dummies/clients/client1.png" class="client-logo" alt="" />
+                </a>
+            </li>
+            <li>
+            <a href="#">
+                <img src="img/dummies/clients/client2.png" class="client-logo" alt="" />
+                </a>
+            </li>
+            <li>
+            <a href="#">
+                <img src="img/dummies/clients/client3.png" class="client-logo" alt="" />
+                </a>
+            </li>
+            <li>
+            <a href="#">
+                <img src="img/dummies/clients/client4.png" class="client-logo" alt="" />
+                </a>
+            </li>
+            <li>
+            <a href="#">
+                <img src="img/dummies/clients/client5.png" class="client-logo" alt="" />
+                </a>
+            </li>
+            <li>
+            <a href="#">
+                <img src="img/dummies/clients/client6.png" class="client-logo" alt="" />
+                </a>
+            </li>
+        </ul>
+        </div>
+    </div>-->
+    </div>
+</section>
+
+
+
+
+
+<?= $this->element('footer'); ?>
